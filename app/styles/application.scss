@@ -1,0 +1,23 @@
+body { 
+    padding-top: 65px; 
+}
+
+.state polygon{
+	fill: #606;
+	stroke: #333;
+	stroke-width: .15px;
+	opacity: .7;
+
+}
+
+.state-abbr{
+	fill: #ddd;
+	font-size: 2px;
+	text-anchor: middle;
+	alignment-baseline: middle;
+}
+
+#main-map {
+	display: block;
+	margin:auto;
+}
