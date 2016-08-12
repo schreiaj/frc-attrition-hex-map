@@ -7,7 +7,15 @@
     "start": "webpack-dev-server --progress",
     "build": "NODE_ENV=production webpack --config ./webpack.production.config.js --progress",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "dist",
+    "prep": [
+        "build"
+    ]
   },
   "author": "Noranda Brown",
   "license": "ISC",
@@ -28,6 +36,7 @@
     "file-loader": "^0.9.0",
     "font-awesome": "^4.6.3",
     "font-awesome-sass-loader": "^1.0.1",
+    "gh-pages-deploy": "^0.4.2",
     "html-webpack-plugin": "^2.22.0",
     "jquery": "^2.2.1",
     "jsdom": "^8.1.0",
