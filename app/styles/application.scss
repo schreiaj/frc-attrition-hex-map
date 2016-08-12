@@ -2,12 +2,16 @@ body {
     padding-top: 65px; 
 }
 
-.state polygon{
+.foreground{
 	fill: #606;
 	stroke: #333;
 	stroke-width: .15px;
 	opacity: .7;
+}
 
+.background{
+	fill: white;
+	opacity: 1.0;
 }
 
 .state-abbr{

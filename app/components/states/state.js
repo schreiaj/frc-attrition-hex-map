@@ -16,10 +16,12 @@ export const State = ({stateData, x=0,y=0,r=10}) =>
 		let geoPosition = `${x},${y}`;
 
 		return (
-			<Motion defaultStyle= {{xPos: 0, yPos:0}} style={{xPos: spring(x, presets.wobbly), yPos: spring(y, presets.wobbly)}} >
+			<Motion defaultStyle= {{xPos: 100*Math.random(), yPos:100*Math.random()}} style={{xPos: spring(x, presets.gentle), yPos: spring(y, presets.gentle)}} >
 				{({xPos,yPos}) =>
 					<g className="state" transform={`translate(${xPos},${yPos})`}> 
-						<polygon points={hexPoints.join(" ")}/>
+						
+						<polygon className='background' points={hexPoints.join(" ")}/>
+						<polygon className='foreground' points={hexPoints.join(" ")}/>
 						<text className="state-abbr">{stateData.abbr}</text>
 					</g>
 				}
